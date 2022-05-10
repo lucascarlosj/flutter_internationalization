@@ -1,3 +1,5 @@
 {
-    "message": "According to a study, downloads increase by 128% per country when apps are available in more than one language."
+    "message": "According to a study, downloads increase by 128% per country when apps are available in more than one language.",
+    "years": "I' am {yeas} ago",
+    "language": "English"
 }
