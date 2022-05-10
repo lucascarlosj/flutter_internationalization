@@ -1,3 +1,3 @@
-arb-dir: lib/l10n
-template-arb-file: app_pt.arb
-output-localization-file: app_localizations.dart
+arb-dir: lib/l10n # Diretorio onde ficará as traduções
+template-arb-file: app_pt.arb # Arquivo base do aplicativo
+output-localization-file: app_localizations.dart # Arquivo gerado

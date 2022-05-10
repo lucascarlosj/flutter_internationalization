@@ -1,43 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 229, 163, 8),
+        backgroundColor: Colors.transparent,
         elevation: 0,
         title: const Text(
           'Flutter Internationalization',
-          style: TextStyle(color: Colors.black54),
+          style: TextStyle(
+            color: Colors.black54,
+          ),
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(20),
         child: Center(
-            child: Column(
-          children: [
-            Image.asset(
-              'assets/logo.png',
-              height: 230,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(AppLocalizations.of(context)!.message,
-                style: const TextStyle(fontSize: 20, color: Colors.black)),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
-              AppLocalizations.of(context)!.language,
-              style: const TextStyle(fontSize: 25, color: Colors.black),
-            )
-          ],
-        )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 30,
+              ),
+              Image.asset(
+                'assets/logo.png',
+                scale: 1.5,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Text(
+                AppLocalizations.of(context)!.message,
+                textAlign: TextAlign.justify,
+                style: const TextStyle(fontSize: 20, color: Colors.black54),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Image.network(
+                AppLocalizations.of(context)!.language.toString(),
+                scale: 3,
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
